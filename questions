@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ</title>
+  <style>
+    /* Add some basic styling here */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .faq-answer {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-item">
+      <div class="faq-question">What payment methods do you accept?</div>
+      <div class="faq-answer">We accept payments via credit/debit cards (Visa, Mastercard, American Express), PayPal, and other secure payment gateways.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What is your shipping policy?</div>
+      <div class="faq-answer">Our shipping policy entails [insert brief overview of shipping methods, processing times, and delivery estimates]. For more detailed information, please refer to our Shipping Policy page.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How long does shipping take?</div>
+      <div class="faq-answer">Shipping times vary depending on your location and the product(s) ordered. Generally, orders are processed within [insert processing time], and delivery typically takes between [insert range of delivery times].</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer international shipping?</div>
+      <div class="faq-answer">Yes, we offer international shipping to most countries worldwide. Additional shipping fees and longer delivery times may apply.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What is your return/exchange policy?</div>
+      <div class="faq-answer">We have a hassle-free return and exchange policy. If you are not satisfied with your purchase, you may return it within [insert return period] for a refund or exchange. Please refer to our Returns & Exchanges page for detailed instructions.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How do I track my order?</div>
+      <div class="faq-answer">Once your order has been shipped, you will receive a tracking number via email. You can track your order by entering the tracking number on our website or the courier's website.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer discounts for bulk orders?</div>
+      <div class="faq-answer">Yes, we offer discounts for bulk orders. Please contact our customer support team for more information on bulk pricing and discounts.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Are the products on your website authentic?</div>
+      <div class="faq-answer">Yes, all products listed on our website are sourced from reputable suppliers and are guaranteed to be authentic.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How do I contact customer support?</div>
+      <div class="faq-answer">You can contact our customer support team via email at [insert email address] or through our Contact Us page. We strive to respond to all inquiries within [insert response time].</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What is your privacy policy?</div>
+      <div class="faq-answer">We take your privacy seriously. Our privacy policy outlines how we collect, use, and protect your personal information. Please refer to our Privacy Policy page for more details.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer gift wrapping services?</div>
+      <div class="faq-answer">Yes, we offer gift wrapping services for an additional fee. You can select this option during the checkout process.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can I cancel my order?</div>
+      <div class="faq-answer">You may cancel your order within [insert cancellation period] of placing it. Please contact our customer support team as soon as possible to request a cancellation.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What should I do if my item arrives damaged or defective?</div>
+      <div class="faq-answer">If your item arrives damaged or defective, please contact our customer support team immediately. We will arrange for a replacement or refund as needed.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you have a loyalty rewards program?</div>
+      <div class="faq-answer">Yes, we have a loyalty rewards program where you can earn points for every purchase. These points can be redeemed for discounts on future orders. Please visit our Loyalty Rewards page for more information.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can I change my shipping address after placing an order?</div>
+      <div class="faq-answer">We can only change the shipping address if your order has not yet been shipped. Please contact our customer support team as soon as possible to request a change.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Are there any additional fees or taxes?</div>
+      <div class="faq-answer">Additional fees and taxes may apply depending on your location and the products ordered. These will be clearly outlined during the checkout process.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How can I be sure my personal information is secure when shopping on your website?</div>
+      <div class="faq-answer">We use industry-standard encryption technology to ensure that your personal information is secure. Our website is also regularly scanned for vulnerabilities and is PCI compliant.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer installation or assembly services for your products?</div>
+      <div class="faq-answer">Installation or assembly services may be available for certain products. Please refer to the product description or contact our customer support team for more information.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you have a size guide for clothing or other applicable items?</div>
+      <div class="faq-answer">Yes, we provide a size guide for clothing and other applicable items. You can find this information on the product page or our Size Guide page.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What if the item I want is out of stock?</div>
+      <div class="faq-answer">If the item you want is out of stock, you can sign up for notifications to be notified when it becomes available again. Alternatively, you can contact our customer support team for assistance in finding a similar product.</div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to toggle visibility of answers
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ</title>
+  <style>
+    /* Add some basic styling here */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .faq-answer {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-item">
+      <div class="faq-question">What payment methods do you accept?</div>
+      <div class="faq-answer">We accept payments via credit/debit cards (Visa, Mastercard, American Express), PayPal, and other secure payment gateways.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What is your shipping policy?</div>
+      <div class="faq-answer">Our shipping policy entails [insert brief overview of shipping methods, processing times, and delivery estimates]. For more detailed information, please refer to our Shipping Policy page.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How long does shipping take?</div>
+      <div class="faq-answer">Shipping times vary depending on your location and the product(s) ordered. Generally, orders are processed within [insert processing time], and delivery typically takes between [insert range of delivery times].</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer international shipping?</div>
+      <div class="faq-answer">Yes, we offer international shipping to most countries worldwide. Additional shipping fees and longer delivery times may apply.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What is your return/exchange policy?</div>
+      <div class="faq-answer">We have a hassle-free return and exchange policy. If you are not satisfied with your purchase, you may return it within [insert return period] for a refund or exchange. Please refer to our Returns & Exchanges page for detailed instructions.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How do I track my order?</div>
+      <div class="faq-answer">Once your order has been shipped, you will receive a tracking number via email. You can track your order by entering the tracking number on our website or the courier's website.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer discounts for bulk orders?</div>
+      <div class="faq-answer">Yes, we offer discounts for bulk orders. Please contact our customer support team for more information on bulk pricing and discounts.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Are the products on your website authentic?</div>
+      <div class="faq-answer">Yes, all products listed on our website are sourced from reputable suppliers and are guaranteed to be authentic.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How do I contact customer support?</div>
+      <div class="faq-answer">You can contact our customer support team via email at [insert email address] or through our Contact Us page. We strive to respond to all inquiries within [insert response time].</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What is your privacy policy?</div>
+      <div class="faq-answer">We take your privacy seriously. Our privacy policy outlines how we collect, use, and protect your personal information. Please refer to our Privacy Policy page for more details.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer gift wrapping services?</div>
+      <div class="faq-answer">Yes, we offer gift wrapping services for an additional fee. You can select this option during the checkout process.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can I cancel my order?</div>
+      <div class="faq-answer">You may cancel your order within [insert cancellation period] of placing it. Please contact our customer support team as soon as possible to request a cancellation.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What should I do if my item arrives damaged or defective?</div>
+      <div class="faq-answer">If your item arrives damaged or defective, please contact our customer support team immediately. We will arrange for a replacement or refund as needed.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you have a loyalty rewards program?</div>
+      <div class="faq-answer">Yes, we have a loyalty rewards program where you can earn points for every purchase. These points can be redeemed for discounts on future orders. Please visit our Loyalty Rewards page for more information.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can I change my shipping address after placing an order?</div>
+      <div class="faq-answer">We can only change the shipping address if your order has not yet been shipped. Please contact our customer support team as soon as possible to request a change.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Are there any additional fees or taxes?</div>
+      <div class="faq-answer">Additional fees and taxes may apply depending on your location and the products ordered. These will be clearly outlined during the checkout process.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How can I be sure my personal information is secure when shopping on your website?</div>
+      <div class="faq-answer">We use industry-standard encryption technology to ensure that your personal information is secure. Our website is also regularly scanned for vulnerabilities and is PCI compliant.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer installation or assembly services for your products?</div>
+      <div class="faq-answer">Installation or assembly services may be available for certain products. Please refer to the product description or contact our customer support team for more information.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you have a size guide for clothing or other applicable items?</div>
+      <div class="faq-answer">Yes, we provide a size guide for clothing and other applicable items. You can find this information on the product page or our Size Guide page.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What if the item I want is out of stock?</div>
+      <div class="faq-answer">If the item you want is out of stock, you can sign up for notifications to be notified when it becomes available again. Alternatively, you can contact our customer support team for assistance in finding a similar product.</div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to toggle visibility of answers
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
